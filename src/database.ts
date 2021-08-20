@@ -1,12 +1,12 @@
 import { connect } from "mongoose";
-import { Environment } from "./config/enviroment"
+import { Environment } from "./config/enviroment";
 
 let env: Environment = new Environment();
 const { DB_HOST, DB_NAME } = env;
 const MONGODB_URI = `mongodb://${DB_HOST}/${DB_NAME}`;
 
 export class DataBase {
-    async CreateDbConnection(): Promise<void> {
+    public async CreateDbConnection(): Promise<void> {
         try {
             await connect(MONGODB_URI, {
                 useUnifiedTopology: true,
