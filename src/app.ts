@@ -2,6 +2,7 @@ import express, { Express, urlencoded, json, Request, Response } from "express";
 import { Environment } from "./config/enviroment";
 import morgan from "morgan";
 import cors from "cors";
+import authRoutes from "./routes/auth.routes";
 
 let env: Environment = new Environment();
 
@@ -19,5 +20,7 @@ app.use(json());
 app.get('/', (req: Request, res: Response) => { 
     res.send('Hello World!!!');
 });
+
+app.use(authRoutes);
 
  export default app;
