@@ -7,7 +7,7 @@
     "start": "node dist/index.js",
     "tswatch": "tsc-watch --onSuccess \"node dist/index.js\" ",
     "dev": "nodemon src/index.ts",
-    "dev:debug": "nodemon --inspect src/index.ts",
+    "debug:dev": "nodemon --inspect src/index.ts",
     "build": "tsc"
   },
   "keywords": [],

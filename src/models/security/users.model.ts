@@ -6,6 +6,8 @@ export interface IUsers {
     email: string;
     password: string;
     deleted: boolean;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 export interface IUserDocument extends IUsers, Document {
